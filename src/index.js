@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-// import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(<ul><li>one</li><li>two</li><li>three</li></ul>, document.getElementById('root'));
+import App from "./App";
 
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.getElementById('root'));
