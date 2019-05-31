@@ -1,16 +1,22 @@
-import React from "react";
+import React, {Component} from "react";
 
-import Product from "./components/Product";
-import productsList from "./components/productsList";
 
-class App extends React.Component {
+
+class App extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            name: "Clay",
+            age: "29"
+        }
+    }
+
     render() {
-
-        const productComponents = productsList.map((item) => <Product key={item.id} product={item} />);
-
         return (
             <div>
-                {productComponents}
+                <h1>{this.state.name}</h1>
+                <h3>{this.state.age} years old</h3>
             </div>
         )
     }
