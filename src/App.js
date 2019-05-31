@@ -3,15 +3,17 @@ import React from "react";
 import Product from "./components/Product";
 import productsList from "./components/productsList";
 
-function App() {
+class App extends React.Component {
+    render() {
 
-    const productComponents = productsList.map((item) => <Product key={item.id} product={item} />);
+        const productComponents = productsList.map((item) => <Product key={item.id} product={item} />);
 
-    return (
-        <div>
-            {productComponents}
-        </div>
-    )
+        return (
+            <div>
+                {productComponents}
+            </div>
+        )
+    }
 }
 
 export default App;
