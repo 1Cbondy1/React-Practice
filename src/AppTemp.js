@@ -1,24 +1,32 @@
-import React from "react"
-import TodoItem from "./components/ToDoItem"
-import todosData from "./components/todosData"
+import React from 'react';
+import Conditional from './components/Conditional';
 
-class App extends React.Component {
+class AppTemp extends React.Component {
+
     constructor() {
-        super()
+        super();
         this.state = {
-            todos: todosData
+            isLoading: true
         }
     }
-    
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            })
+        }, 1500);
+    }
+
     render() {
-        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
-        
         return (
-            <div className="todo-list">
-                {todoItems}
+            <div>
+                {this.state.isLoading ? 
+                <h1>Loading...</h1> :
+                <Conditional />}
             </div>
-        )    
+        )
     }
 }
 
-export default App
+export default AppTemp;
