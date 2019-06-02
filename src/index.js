@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
+import AppTemp from "./AppTemp";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppTemp />, document.getElementById('root'));

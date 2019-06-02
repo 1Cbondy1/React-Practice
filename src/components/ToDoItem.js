@@ -1,17 +1,15 @@
-import React from "react";
+import React from "react"
 
-function ToDoItem() {
-
-    const textStyle = {color: "red"};
-
+function TodoItem(props) {
     return (
-        <div>
-            <p>
-                <input type="checkbox" />
-                <span style={textStyle}>  Placeholder text here.</span>
-            </p>
+        <div className="todo-item">
+            <input 
+                type="checkbox" 
+                checked={props.item.completed} 
+                onChange={() => console.log("changed")}/>
+            <p>{props.item.text}</p>
         </div>
     )
 }
 
-export default ToDoItem;
+export default TodoItem
